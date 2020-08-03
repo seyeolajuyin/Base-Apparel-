@@ -1,4 +1,6 @@
-const form = document.getElementById("form");
+// variables
+
+const form = document.getElementById("form")
 const emailForm = document.getElementById("emailForm");
 const smallMessage = document.getElementById("error-message");
 const errorIcon = document.querySelector(".error-icon");
