@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+/* General styles */
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+h1 {
+  text-transform: uppercase;
+  color: hsl(0, 6%, 24%);
+  font-size: 60px;
+  letter-spacing: 10px;
+  transform: translateX(-100%);
+  animation: comein 1s ease forwards;
+}
+
+@keyframes comein {
+  to {
+    transform: translateX(0);
+  }
+}
+
+h1 span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 200;
+}
+
+.bottom-text p {
+  color: hsl(0, 36%, 70%);
+  line-height: 26px;
+  width: 458px;
+}
+.container-full {
+  display: flex;
+  min-height: 100vh;
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* left grid */
+
+.inner-container {
+  max-width: 400px;
+}
+.container-1 {
+  width: 60%;
+  margin: 0 60px;
+}
+
+.logo {
+  margin: 60px 0;
+  width: 200px;
+}
+
+.bg-mobile {
+  display: none;
+}
+
+/* right grid */
+
+.container-2 {
+  width: 40%;
+  background-image: url("./images/hero-desktop.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* input style  */
+
+form {
+  position: relative;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid hsla(0, 36%, 70%, 0.5);
+  padding: 15px;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 50px;
+  width: 100%;
+  height: 50px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+}
+
+input::placeholder {
+  color: hsla(0, 36%, 70%, 0.5);
+}
+
+button {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 5px 5px 10px hsla(0, 36%, 70%, 0.5);
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.error-icon {
+  position: absolute;
+  top: 15px;
+  right: 120px;
+  display: none;
+}
+
+small {
+  color: hsl(0, 93%, 68%);
+  margin: 10px 0px 0px 30px;
+  display: none;
+}
+
+/* error class */
+
+.errorMessage {
+  display: block;
+}
+.errorBorder {
+  box-shadow: 0px 0px 10px hsla(0, 93%, 68%);
+}
+
+/* media queries */
+@media screen and (max-width: 400px) {
+  .container-1 {
+    width: 100%;
+    margin: 0px 10px;
+  }
+
+  .bg-mobile {
+    display: block;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+  .bottom-text p {
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  .container-2 {
+    display: none;
+  }
+}
